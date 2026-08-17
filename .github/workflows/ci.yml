@@ -1,0 +1,25 @@
+# Check the faces resolve, build the deb and lint it. No compiler involved.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends dpkg-dev fontconfig lintian
+
+      - name: make ci
+        run: make ci
+
+      - name: lintian
+        run: lintian $(make -s deb-path) || true

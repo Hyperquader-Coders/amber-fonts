@@ -1,0 +1,17 @@
+dist/
+out/
+
+# Agent files are local and are not shared.
+.claude/
+.mcp.json
+
+# Claude config dirs, if a session ever materialises one here.
+.claude-amber/
+.credentials.json
+
+# Agent files are local and are not shared.
+.claude/
+
+# Claude config dirs, if a session ever materialises one here.
+.claude-amber/
+.credentials.json

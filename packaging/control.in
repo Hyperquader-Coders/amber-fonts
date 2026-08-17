@@ -1,0 +1,26 @@
+Package: amber-fonts
+Version: @VERSION@-1
+Architecture: all
+Maintainer: Hyperquader <hyperquader@gmail.com>
+Installed-Size: @SIZE@
+Depends: fontconfig
+Section: fonts
+Priority: optional
+Homepage: https://github.com/Hyperquader-Coders/amber-fonts
+Description: SauceCodePro Nerd Font for the Amber Linux suite
+ The typeface every Amber Linux application draws with, packaged once so
+ that copal, kat800 and amberlin depend on it instead of each carrying
+ their own copy of the same files.
+ .
+ Two families are shipped and they are not interchangeable. "SauceCodePro
+ Nerd Font" draws its icons at their natural width, which is what Copal
+ and Amberlin want because they draw notes rather than a grid.
+ "SauceCodePro Nerd Font Mono" squeezes each icon into exactly one
+ character cell, which is what kat800 needs because VTE is a character
+ grid. Both are monospaced for text — the difference is the icons.
+ .
+ The faces are Source Code Pro (Adobe) patched with additional glyphs by
+ the Nerd Fonts project, both under the SIL Open Font License 1.1. No
+ Debian package carries the Nerd Fonts patch, which is why the suite
+ ships it itself: a missing family is a silent fallback to whatever Pango
+ picks, which is invisible in the code and obvious on screen.

@@ -1,0 +1,51 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: amber-fonts
+Source: https://github.com/Hyperquader-Coders/amber-fonts
+
+Files: *
+Copyright: Copyright (C) 2026 Andre Bremer
+License: BSD-3-Clause
+
+Files: packaging/fonts/truetype/saucecodepro-nerd/*
+Copyright: 2010-2019 Adobe (https://github.com/adobe-fonts/source-code-pro),
+ patched by the Nerd Fonts project (https://github.com/ryanoasis/nerd-fonts)
+License: OFL-1.1
+
+License: OFL-1.1
+ This Font Software is licensed under the SIL Open Font License, Version 1.1.
+ This license is available with a FAQ at: http://scripts.sil.org/OFL
+ .
+ PREAMBLE
+ The goals of the Open Font License (OFL) are to stimulate worldwide
+ development of collaborative font projects, to support the font creation
+ efforts of academic and linguistic communities, and to provide a free and
+ open framework in which fonts may be shared and improved in partnership
+ with others.
+ .
+ The OFL allows the licensed fonts to be used, studied, modified and
+ redistributed freely as long as they are not sold by themselves. The
+ fonts, including any derivative works, can be bundled, embedded,
+ redistributed and/or sold with any software provided that any reserved
+ names are not used by derivative works. The fonts and derivatives,
+ however, cannot be released under any other type of license. The
+ requirement for fonts to remain under this license does not apply
+ to any document created using the fonts or their derivatives.
+
+License: BSD-3-Clause
+ Applies to the packaging in this repository — the Makefile and the packaging
+ templates — not to the fonts, which are OFL-1.1 above. The full text is in
+ /usr/share/doc/amber-fonts/LICENSE.
+ Copyright (C) 2026 Andre Bremer.
+ .
+ The Licensed Work may be copied, modified, and distributed for non-commercial
+ development, testing, evaluation, and internal use. Commercial production use,
+ and use of the work to train machine-learning or generative-AI models, require
+ a separate commercial license from the Licensor. On the Change Date the work
+ converts automatically and irrevocably to the GPL-3.0 License.
+ .
+ The full license text is in the LICENSE file shipped with this package
+ (/usr/share/doc/amber-fonts/LICENSE) and in the source repository. Provided
+ "AS IS" without warranty of any kind.
+ .
+ On the Change Date, the complete text of the GNU General Public License
+ version 3 can be found in /usr/share/common-licenses/GPL-3 on Debian systems.
