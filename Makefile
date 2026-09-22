@@ -171,7 +171,12 @@ deb-path:
 # No fc-cache, no maintainer scripts: fontconfig's dpkg trigger on
 # /usr/share/fonts does it (maintainer-script-updates-fontconfig-cache-improperly).
 deb-install: deb
-	sudo apt install --reinstall ./$(DEB)
+	# --allow-downgrades: once the package is published, the archive
+	# carries the same version at a higher pin priority than a local
+	# file, so apt reads installing your own build as a downgrade and
+	# refuses. amber-rebuild.sh has always passed this; the make
+	# targets never did, and worked only until the package shipped.
+	sudo apt install --reinstall --allow-downgrades ./$(DEB)
 
 deb-remove:
 	sudo apt remove amber-fonts
