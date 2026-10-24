@@ -1,0 +1,4 @@
+# Each family's OFL.txt is upstream's own licence file, stored as downloaded.
+# Source Sans 3 ships its copy with CRLF endings; core.autocrlf=input would
+# rewrite them, and a licence copied verbatim is copied verbatim.
+packaging/fonts/truetype/*/OFL.txt -text

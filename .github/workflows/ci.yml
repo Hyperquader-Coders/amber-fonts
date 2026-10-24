@@ -1,0 +1,25 @@
+# Check the faces resolve, build the deb and lint it. No compiler involved.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # The packages are the Makefile's DEPS list.
+      - name: system packages
+        run: sudo apt-get update && make init-packages APT_FLAGS=-y
+
+      - name: make ci
+        run: make ci
+
+      - name: lintian
+        run: lintian $(make -s deb-path) || true
