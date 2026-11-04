@@ -1,0 +1,90 @@
+Upstream sources
+================
+
+Every face under packaging/fonts/truetype/ comes from the release named here and
+is an unmodified member of the archive named with it. A sha256 is of the archive
+as downloaded from the upstream project's own release page, not of the extracted
+face; `sha256sum` the archive again to check it.
+
+Each family's OFL.txt is that family's own licence file, copied byte for byte.
+They are not interchangeable: the copyright notice and the Reserved Font Names
+are stated in the file, and they differ per family.
+
+
+truetype/source-code-pro/
+-------------------------
+
+Project   https://github.com/adobe-fonts/source-code-pro
+Release   2.042R-u/1.062R-i/1.026R-vf. Upright and italic are versioned apart:
+          `fc-query -f '%{fontversion}' <face>` reports 2.042 for Regular and
+          Bold, 1.062 for It and BoldIt.
+Archive   TTF-source-code-pro-2.042R-u_1.062R-i.zip
+          sha256 0c85bac90d15c040b82939aa92bc8404420fccc02e37bbcb9c93a7f21abb52c6
+Faces     TTF/SourceCodePro-{Regular,Bold,It,BoldIt}.ttf
+Family    Source Code Pro
+Licence   The TTF archive of this release carries no licence file, so OFL.txt is
+          LICENSE.md from the repository at the same tag:
+          https://github.com/adobe-fonts/source-code-pro
+          sha256 7c940e28a5388e9bba866cf0e408edda45fe0899ba98665b8f6ab31dc5e4b8ff
+          That checksum is of the licence file itself, which is stable, rather
+          than of a generated tag archive, which is not.
+
+The release also ships ExtraLight, Light, Medium, Semibold and Black, each with
+an italic, and the variable fonts. Only the four faces above are shipped: the
+package promises Regular, Bold, Italic and BoldItalic in every family, and a
+weight a caller has to name by family string is a second promise.
+
+
+truetype/source-sans-3/
+-----------------------
+
+Project   https://github.com/adobe-fonts/source-sans
+Release   3.052R
+Archive   TTF-source-sans-3.052R.zip
+          sha256 1b0dd1ec44b39f1dd98bbd153a1a3815f083639874ddee02c842bd601bad3d21
+Faces     TTF/SourceSans3-{Regular,Bold,It,BoldIt}.ttf
+Family    Source Sans 3
+Licence   The TTF and OTF archives of this release carry no licence file, so
+          OFL.txt is LICENSE.md from the source archive of the same tag:
+          https://github.com/adobe-fonts/source-sans/archive/refs/tags/3.052R.zip
+          sha256 8740ef8bee3a3144b3dbb8b673264bfc685dab944610b884b14e6146ded9a50a
+          GitHub generates a tag archive on request and that checksum is not a
+          stable identifier for the tag. The licence text is the copy in the
+          directory; the checksum records only what was fetched.
+
+
+truetype/source-serif-4/
+------------------------
+
+Project   https://github.com/adobe-fonts/source-serif
+Release   4.005R
+Archive   source-serif-4.005_Desktop.zip
+          sha256 549fdb8f9a682bd06944298621404969f6de77c2e422ff3b8244a1dcd6a0c425
+Faces     TTF/SourceSerif4-{Regular,Bold,It,BoldIt}.ttf
+Family    Source Serif 4
+Licence   LICENSE.md, from the root of the same archive.
+
+The release also ships the optical sizes — Caption, SmText, Subhead, Display —
+and weights from ExtraLight to Black. Only the four faces above are shipped:
+the package promises Regular, Bold, Italic and BoldItalic in every family, and
+an optical size a caller has to name by family string is a second promise.
+
+
+truetype/saucecodepro-nerd/
+---------------------------
+
+Project   https://github.com/ryanoasis/nerd-fonts (the patch)
+          https://github.com/adobe-fonts/source-code-pro (the outlines)
+Release   Nerd Fonts 3.5.1 over Source Code Pro 2.042, as the faces declare in
+          their own name table: `fc-query -f '%{fontversion}' <face>` for the
+          outlines, name IDs 3 and 5 for the patch version.
+Archive   SourceCodePro.tar.xz
+          sha256 50ead7bb7addce27cf4b55f4fffb669b5f1899fece675fad623a2a75a478c8c7
+Faces     SauceCodeProNerdFont{,Mono}-{Regular,Bold,Italic,BoldItalic}.ttf
+Family    SauceCodePro Nerd Font, SauceCodePro Nerd Font Mono
+Licence   ../OFL.txt, one directory up, where it covers both families.
+
+The archive also ships ExtraLight, Light, Medium, SemiBold and Black with their
+italics, and a third variant, SauceCodePro Nerd Font Propo, whose icons are
+proportionally spaced. Neither is shipped: the suite asks for natural-width
+icons or one-cell icons, and Propo is neither.
